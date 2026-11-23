@@ -3,7 +3,7 @@
 A simple and responsive Rock-Paper-Scissors web game built with plain HTML, CSS, and JavaScript. I created this project for the CoLearn Software Engineering Coding Assessment.
 
 ## Links
-- **Live App:** [Insert your Vercel URL here]
+- **Live App:** https://rock-paper-scissors-classic.vercel.app/
 - **GitHub Repo:** https://github.com/arendilo/rock-paper-scissors
 
 ## How I Built It & Code Decisions
