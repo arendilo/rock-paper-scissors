@@ -1,0 +1,118 @@
+:root {
+  --bg: #f6f1ea;
+  --card: #ffffff;
+  --ink: #1c1917;
+  --muted: #6b635b;
+  --accent: #e85d2a;
+  --win: #15803d;
+  --lose: #b91c1c;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 1.5rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+}
+
+header {
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  font-size: 1.75rem;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.4rem;
+}
+
+.score {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.score strong {
+  color: var(--ink);
+  font-size: 1.1rem;
+}
+
+.status-box {
+  background: var(--card);
+  border: 1.5px solid var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+  border-radius: 8px;
+  padding: 1.75rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.moves {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.result {
+  font-size: 1.4rem;
+  letter-spacing: -0.02em;
+}
+
+.result.win { color: var(--win); }
+.result.lose { color: var(--lose); }
+.result.draw { color: var(--accent); }
+
+.actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.65rem;
+  margin-bottom: 1.5rem;
+}
+
+.actions button {
+  background: var(--card);
+  color: var(--ink);
+  border: 1.5px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
+  border-radius: 6px;
+  padding: 0.75rem 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.actions button:hover {
+  background: #fdfaf6;
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+.actions button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--ink);
+}
+
+.reset-link {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.reset-link:hover {
+  color: var(--ink);
+}

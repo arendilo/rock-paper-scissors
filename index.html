@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Rock, Paper, Scissors.</h1>
+      <p class="score">You <strong id="player-score">0</strong> — <strong id="computer-score">0</strong> Computer</p>
+    </header>
+
+    <section class="status-box" aria-live="polite">
+      <p id="moves" class="moves">Pick a move below to start</p>
+      <h2 id="result" class="result">Ready?</h2>
+    </section>
+
+    <section class="actions">
+      <button type="button" data-move="rock">Rock</button>
+      <button type="button" data-move="paper">Paper</button>
+      <button type="button" data-move="scissors">Scissors</button>
+    </section>
+
+    <button type="button" id="reset" class="reset-link">Reset score</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
