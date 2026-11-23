@@ -61,7 +61,7 @@ function reset() {
   playerScoreEl.textContent = '0';
   computerScoreEl.textContent = '0';
   movesEl.textContent = 'Pick a move below to start';
-  resultEl.textContent = 'Ready?';
+  resultEl.textContent = 'Are You Ready?';
   resultEl.className = 'result';
   matchupEl.classList.add('hidden');
 }
