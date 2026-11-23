@@ -1,7 +1,7 @@
-const RULES = {
+const RULES = {  //instead of if else, use object to set the rules.
   rock: 'scissors',
   paper: 'rock',
-  scissors: 'paper'
+  scissors: 'paper' //i can add more moves.
 };
 
 const MOVES = Object.keys(RULES);
@@ -30,9 +30,9 @@ function play(playerMove) {
 
 function render(playerMove, computerMove, outcome) {
   const labels = {
-    win: 'You win!',
-    lose: 'Computer wins!',
-    draw: "It's a tie."
+    win: 'You win!!',
+    lose: 'You lose :(, go try again!',
+    draw: "it's a tie!"
   };
 
   playerScoreEl.textContent = score.player;

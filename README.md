@@ -1,23 +1,24 @@
 # Rock, Paper, Scissors
 
-A lightweight, responsive Rock-Paper-Scissors web application built with vanilla HTML, CSS, and JavaScript. Created as part of the CoLearn Software Engineering Coding Assessment.
+A simple and responsive Rock-Paper-Scissors web game built with plain HTML, CSS, and JavaScript. I created this project for the CoLearn Software Engineering Coding Assessment.
 
-## Live Demo
-- **Live URL:** [Insert your Vercel URL here]
-- **Repository:** [Insert your GitHub repository URL here]
+## Links
+- **Live App:** [Insert your Vercel URL here]
+- **GitHub Repo:** https://github.com/arendilo/rock-paper-scissors
 
-## Engineering Approach & Design Decisions
+## How I Built It & Code Decisions
 
-This project is structured around clean separation of concerns, predictable state management, and ease of maintenance:
+I wanted to keep the code clean, easy to read, and simple to update later on:
 
-- **Data-Driven Rules Lookup (`O(1)` Evaluation):** Instead of nested `if/else` chains, game rules are modeled in a single `RULES` lookup object (`{ rock: 'scissors', ... }`). Available moves are derived dynamically via `Object.keys(RULES)` to maintain a single source of truth.
-- **Separation of Pure Logic & DOM Rendering:** Outcome evaluation (`getOutcome`) is implemented as a pure function independent of the UI, while DOM updates are isolated inside a dedicated `render` function.
-- **Scalable Event Handling:** Action buttons use `data-move` attributes, allowing new moves (e.g., *Lizard*, *Spock*) to be added by updating the `RULES` map and HTML markup without modifying core game functions.
-- **Maintainable Styling:** Built with semantic HTML and CSS custom properties (`:root`) for consistent theming and minimal CSS specificity.
+- **Simple Rule Checking (`RULES` object):** Instead of writing a long chain of `if/else` statements for every possible match, I stored the winning rules inside one `RULES` object (`{ rock: 'scissors', ... }`). The list of available moves is also pulled directly from this object using `Object.keys(RULES)`, so everything stays in sync.
+- **Separating Logic and Screen Updates:** I make the game logic separate from the page updates. `getOutcome()` only handles calculating who won, while `render()` takes care of updating the text and scores shown on the screen.
+- **Easy to Add New Moves:** Each button uses a `data-move` attribute. If I ever want to add more choices later (like *Lizard* or *Spock*), I only need to add them to the `RULES` object and HTML buttons without rewriting the main game functions.
+- **Clean & Reusable Styling:** I used CSS variables (`:root`) at the top of the stylesheet so colors are easy to manage in one place.
 
-## Project Structure
+## Project Files
 
 ```text
-├── index.html   # Semantic markup and accessible status regions
-├── style.css    # Responsive layout and CSS custom properties
-└── script.js    # State management, rule lookup, and DOM rendering
+├── index.html   # Page layout and game buttons.
+├── style.css    # Styling, colors, and responsive layout.
+├── script.js    # Game rules, score tracking, and screen updates.
+└── README.md    # Project documentation.
